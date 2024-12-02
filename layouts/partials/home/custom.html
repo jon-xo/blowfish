@@ -1,0 +1,29 @@
+<article class="max-w-full prose dark:prose-invert">
+    {{ with .Title }}
+      <header>
+        <h1>{{ . | emojify }}</h1>
+      </header>
+    {{ end }}
+    <section>{{ .Content }}</section>
+  </article>
+<div class="columns-2 gap-2">
+    <article class="prose dark:prose-invert">
+        <section class="w-full">
+            {{ partial "recent-articles/list.html" . }}
+          </section>
+    </article>
+    <article class="prose dark:prose-invert">
+        <section class="w-full">
+            {{ partial "recent-articles/list.html" . }}
+          </section>
+    </article>
+</div>
+{{/*  <article class="prose dark:prose-invert">
+        <section class="w-full">
+          {{ partial "recent-articles/list.html" . }}
+        </section>
+        <section>
+          {{ partial "recent-articles/list.html" . }}
+        </section>
+
+</article>  */}}
